@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Confirmed — RideIndia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body style="background: var(--color-surface);">
+  <header id="site-header" data-active="index.html"></header>
+
+  <main class="page">
+    <div class="container confirm-wrap">
+      <div class="confirm-card">
+        <div class="confirm-check">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+        </div>
+        <h1>Booking Confirmed!</h1>
+        <p id="confirm-sub">Your reservation has been successfully placed.</p>
+
+        <div class="confirm-details" id="confirm-details"></div>
+
+        <div class="confirm-actions">
+          <a class="btn btn--primary btn--block btn--lg" href="index.html">View My Bookings</a>
+          <a class="modal__switch" href="index.html">Back to Home</a>
+        </div>
+
+        <p class="confirm-note">A confirmation email with the rental agreement and pickup instructions has been sent to your email address.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/icons.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/confirmation.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
