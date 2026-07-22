@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment — RideIndia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body style="background: var(--color-surface);">
+  <header id="site-header" data-active="available-cars.html"></header>
+
+  <main class="page">
+    <div class="container layout-2col--wide layout-2col">
+      <div>
+        <div style="margin-bottom: var(--space-8);">
+          <h1 class="panel__title">Payment Method</h1>
+          <p class="panel__subtitle">All transactions are secure and encrypted.</p>
+        </div>
+
+        <div class="panel" style="padding:0; overflow:hidden;">
+          <div class="tabs" role="tablist">
+            <button class="tab is-active" data-tab="card" role="tab">Credit / Debit Card</button>
+            <button class="tab" data-tab="upi" role="tab">UPI Payment</button>
+            <button class="tab" data-tab="netbank" role="tab">Net Banking</button>
+          </div>
+
+          <!-- Card -->
+          <form class="tab-panel is-active" id="card-panel" data-panel="card" novalidate>
+            <div class="field" data-field>
+              <label class="field__label" for="pay-name">Cardholder Name</label>
+              <div class="field__control"><i data-icon="user"></i>
+                <input id="pay-name" type="text" placeholder="Name on card">
+              </div>
+              <span class="field__error"><i data-icon="info"></i><span data-error-text></span></span>
+            </div>
+            <div class="field" data-field>
+              <label class="field__label" for="pay-card">Card Number</label>
+              <div class="field__control"><i data-icon="credit-card"></i>
+                <input id="pay-card" type="text" inputmode="numeric" placeholder="0000 0000 0000 0000" maxlength="19">
+              </div>
+              <span class="field__error"><i data-icon="info"></i><span data-error-text></span></span>
+            </div>
+            <div class="form-grid">
+              <div class="field" data-field>
+                <label class="field__label" for="pay-exp">Expiry Date</label>
+                <div class="field__control"><i data-icon="calendar"></i>
+                  <input id="pay-exp" type="text" inputmode="numeric" placeholder="MM / YY" maxlength="7">
+                </div>
+                <span class="field__error"><i data-icon="info"></i><span data-error-text></span></span>
+              </div>
+              <div class="field" data-field>
+                <label class="field__label" for="pay-cvv">CVV</label>
+                <div class="field__control"><i data-icon="lock"></i>
+                  <input id="pay-cvv" type="password" inputmode="numeric" placeholder="•••" maxlength="4">
+                </div>
+                <span class="field__error"><i data-icon="info"></i><span data-error-text></span></span>
+              </div>
+            </div>
+            <p class="pay-note"><i data-icon="shield-check"></i> Your payment information is encrypted and secure.</p>
+            <button class="btn btn--primary btn--block btn--lg" type="submit" id="pay-btn">Pay <span id="pay-amount"></span></button>
+          </form>
+
+          <!-- UPI -->
+          <form class="tab-panel" id="upi-panel" data-panel="upi" novalidate>
+            <div class="field" data-field>
+              <label class="field__label" for="upi-id">UPI ID</label>
+              <div class="field__control"><i data-icon="message-circle"></i>
+                <input id="upi-id" type="text" placeholder="yourname@upi">
+              </div>
+              <span class="field__error"><i data-icon="info"></i><span data-error-text></span></span>
+            </div>
+            <p class="pay-note"><i data-icon="shield-check"></i> You'll approve the payment in your UPI app.</p>
+            <button class="btn btn--primary btn--block btn--lg" type="submit">Pay <span class="pay-amount-mirror"></span></button>
+          </form>
+
+          <!-- Net Banking -->
+          <form class="tab-panel" id="netbank-panel" data-panel="netbank" novalidate>
+            <div class="field" data-field>
+              <label class="field__label" for="bank">Select Bank</label>
+              <div class="field__control"><i data-icon="briefcase"></i>
+                <input id="bank" type="text" placeholder="e.g. HDFC, ICICI, SBI">
+              </div>
+              <span class="field__error"><i data-icon="info"></i><span data-error-text></span></span>
+            </div>
+            <p class="pay-note"><i data-icon="shield-check"></i> You'll be redirected to your bank's secure page.</p>
+            <button class="btn btn--primary btn--block btn--lg" type="submit">Pay <span class="pay-amount-mirror"></span></button>
+          </form>
+        </div>
+      </div>
+
+      <aside class="panel summary" id="summary" aria-label="Booking summary"></aside>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/icons.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/payment.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

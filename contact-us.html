@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — RideIndia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body style="background: var(--color-surface);">
+  <header id="site-header" data-active="contact-us.html"></header>
+
+  <main class="page">
+    <section class="page-hero">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p>Get in touch with our customer success team. We're here to assist you with reservations, billing, corporate partnerships, or roadside help.</p>
+      </div>
+    </section>
+
+    <div class="container" style="padding-block: var(--space-16);">
+      <div class="contact-layout">
+        <div class="panel">
+          <h2 style="font-family: var(--font-head); font-weight: 800; font-size: 1.75rem;">Send Us a Message</h2>
+          <p style="color: var(--color-muted); margin: var(--space-2) 0 var(--space-6);">Fill out the form below and we will get back to you within 24 hours.</p>
+          <form id="contact-form" novalidate>
+            <div class="form-grid">
+              <div class="field" data-field>
+                <label class="field__label" for="ct-name">Full Name</label>
+                <div class="field__control"><i data-icon="user"></i><input id="ct-name" type="text" placeholder="Enter your full name"></div>
+                <span class="field__error"><i data-icon="info"></i><span data-error-text></span></span>
+              </div>
+              <div class="field" data-field>
+                <label class="field__label" for="ct-email">Email Address</label>
+                <div class="field__control"><i data-icon="mail"></i><input id="ct-email" type="email" placeholder="Enter email address"></div>
+                <span class="field__error"><i data-icon="info"></i><span data-error-text></span></span>
+              </div>
+              <div class="field" data-field>
+                <label class="field__label" for="ct-phone">Phone Number</label>
+                <div class="field__control"><i data-icon="phone"></i><input id="ct-phone" type="tel" placeholder="Enter phone number"></div>
+                <span class="field__error"><i data-icon="info"></i><span data-error-text></span></span>
+              </div>
+              <div class="field" data-field>
+                <label class="field__label" for="ct-subject">Subject</label>
+                <div class="field__control"><i data-icon="info"></i><input id="ct-subject" type="text" value="General Inquiry"></div>
+                <span class="field__error"><i data-icon="info"></i><span data-error-text></span></span>
+              </div>
+              <div class="field field--full" data-field>
+                <label class="field__label" for="ct-message">Your Message</label>
+                <div class="field__control field__control--textarea"><textarea id="ct-message" placeholder="Describe your query in detail..."></textarea></div>
+                <span class="field__error"><i data-icon="info"></i><span data-error-text></span></span>
+              </div>
+            </div>
+            <button class="btn btn--primary btn--lg" type="submit" style="margin-top: var(--space-6);">Submit Message</button>
+            <p class="form-note form-note--success" id="ct-success" style="display:none; margin-top: var(--space-4);"></p>
+          </form>
+        </div>
+
+        <aside class="contact-info">
+          <div class="contact-info__item">
+            <span class="contact-info__icon"><i data-icon="map-pin"></i></span>
+            <div><h3>Office HQ</h3><p style="color:var(--color-primary);font-weight:600;">Bandra Kurla Complex</p><p>205, Mumbai, MH 400051</p></div>
+          </div>
+          <div class="contact-info__item">
+            <span class="contact-info__icon"><i data-icon="mail"></i></span>
+            <div><h3>Email Us</h3><p style="color:var(--color-primary);font-weight:600;">hello@rideindia.in</p><p>Response within 24 hours</p></div>
+          </div>
+          <div class="contact-info__item">
+            <span class="contact-info__icon"><i data-icon="phone"></i></span>
+            <div><h3>Call Us</h3><p style="color:var(--color-primary);font-weight:600;">+91 1800 123 4567</p><p>24/7 roadside assistance</p></div>
+          </div>
+          <div class="contact-info__item">
+            <span class="contact-info__icon"><i data-icon="clock"></i></span>
+            <div><h3>Working Hours</h3><p style="color:var(--color-primary);font-weight:600;">Mon–Sat, 9AM – 8PM</p><p>For walk-in services and queries</p></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/icons.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
