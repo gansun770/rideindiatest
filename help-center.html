@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help Center — RideIndia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <header id="site-header" data-active="help-center.html"></header>
+
+  <main class="page">
+    <section class="page-hero">
+      <div class="container">
+        <h1>How can we help?</h1>
+        <p>Search our library of articles, tutorials, and community discussions to find exactly what you need.</p>
+        <form class="page-hero__search field" data-field style="margin-top: var(--space-8);" onsubmit="return false;">
+          <div class="field__control"><i data-icon="search"></i>
+            <input id="help-search" type="search" placeholder="Ask a question or search keywords...">
+            <button class="btn btn--primary" type="submit" style="height:36px;padding:8px 20px;">Search</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div style="margin-bottom: var(--space-10);">
+          <h2 style="font-size: var(--fs-h2); font-family: var(--font-head);">Support channels</h2>
+          <p style="color: var(--color-muted); margin-top: var(--space-2);">Choose the best way to get help. We're here to support you quickly and clearly.</p>
+        </div>
+        <div class="channel-grid">
+          <div class="channel-card reveal">
+            <span class="channel-card__icon"><i data-icon="message-circle"></i></span>
+            <h3>Live Chat</h3><p>24/7 instant support. Get answers in minutes.</p>
+            <a class="link-arrow" href="#">Start chat <i data-icon="arrow-right"></i></a>
+          </div>
+          <div class="channel-card reveal reveal--delay-1">
+            <span class="channel-card__icon"><i data-icon="mail"></i></span>
+            <h3>Email Support</h3><p>Response within 24 hours. Best for non-urgent questions.</p>
+            <a class="link-arrow" href="contact-us.html">Send email <i data-icon="arrow-right"></i></a>
+          </div>
+          <div class="channel-card reveal reveal--delay-2">
+            <span class="channel-card__icon"><i data-icon="phone"></i></span>
+            <h3>Phone Support</h3><p>Call directly for urgent issues. Available during business hours.</p>
+            <a class="link-arrow" href="tel:+9118001234567">+91 1800 123 4567 <i data-icon="arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width: 900px;">
+        <h2 style="font-size: var(--fs-h2); font-family: var(--font-head); margin-bottom: var(--space-8);">Common questions</h2>
+        <div class="accordion" id="help-accordion"></div>
+        <p style="text-align:center; margin-top: var(--space-10); color: var(--color-muted);">
+          Can't find what you're looking for? <a class="modal__switch" href="faqs.html">Browse all FAQs</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/icons.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/help.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

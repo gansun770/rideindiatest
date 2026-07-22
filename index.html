@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RideIndia — Find Your Perfect Ride, Hassle-Free</title>
+  <meta name="description" content="Search, compare, and book the right vehicle in minutes. Transparent pricing, flexible pickup across India, no hidden fees.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+  <header id="site-header" data-active="index.html"></header>
+
+  <main class="page">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" style="--hero-img: url('assets/img/37cecc12dfda.png');">
+      <div class="container hero__inner">
+        <div class="reveal">
+          <h1 class="hero__title">Find Your Perfect Ride,<br>Hassle-Free</h1>
+          <p class="hero__subtitle">Search, compare, and book the right vehicle in minutes. Transparent pricing. Flexible pickup across India. No hidden fees.</p>
+        </div>
+
+        <form class="search-card reveal reveal--delay-1" id="search-form" novalidate>
+          <div class="search-card__fields">
+            <div class="field" data-field>
+              <label class="field__label" for="pickup">Pickup Location</label>
+              <div class="field__control"><i data-icon="map-pin"></i>
+                <input id="pickup" name="pickup" type="text" value="Mumbai, Maharashtra">
+              </div>
+            </div>
+            <div class="field" data-field>
+              <label class="field__label" for="dropoff">Drop-off Location</label>
+              <div class="field__control"><i data-icon="map-pin"></i>
+                <input id="dropoff" name="dropoff" type="text" placeholder="Same as pickup">
+              </div>
+            </div>
+            <div class="field" data-field>
+              <label class="field__label" for="pickup-date">Pickup Date</label>
+              <div class="field__control"><i data-icon="calendar"></i>
+                <input id="pickup-date" name="pickup-date" type="text" value="Jan 15, 2026"
+                  onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'">
+              </div>
+            </div>
+            <div class="field" data-field>
+              <label class="field__label" for="return-date">Return Date</label>
+              <div class="field__control"><i data-icon="calendar"></i>
+                <input id="return-date" name="return-date" type="text" value="Jan 19, 2026"
+                  onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'">
+              </div>
+            </div>
+          </div>
+          <a class="btn btn--primary btn--lg" href="available-cars.html">
+            <i data-icon="search"></i> Search Available Cars
+          </a>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===================== CATEGORIES ===================== -->
+    <section class="section" id="categories">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>Every Vehicle for Every Journey</h2>
+          <p>From budget-friendly economy to premium luxury — we have the perfect car for you.</p>
+        </div>
+        <div class="cards-grid" id="category-grid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== HOW IT WORKS ===================== -->
+    <section class="section section--alt" id="how">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>Book in 3 Simple Steps</h2>
+          <p>Follow these quick and easy steps to schedule your perfect getaway.</p>
+        </div>
+        <div class="steps">
+          <div class="step reveal">
+            <span class="step__num">01</span>
+            <div>
+              <h3 class="step__title">Search &amp; Compare</h3>
+              <p class="step__desc">Enter your dates and city, browse vehicles with upfront pricing in INR.</p>
+            </div>
+          </div>
+          <div class="step reveal reveal--delay-1">
+            <span class="step__num">02</span>
+            <div>
+              <h3 class="step__title">Book Instantly</h3>
+              <p class="step__desc">Reserve in under 2 minutes, no paperwork or phone calls needed.</p>
+            </div>
+          </div>
+          <div class="step reveal reveal--delay-2">
+            <span class="step__num">03</span>
+            <div>
+              <h3 class="step__title">Pick Up &amp; Drive</h3>
+              <p class="step__desc">Collect from 500+ locations across India or get doorstep delivery.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== WHY RIDEINDIA ===================== -->
+    <section class="section" id="why">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>Why Thousands Choose RideIndia</h2>
+          <p>Everything you need for a smooth, transparent and worry-free rental.</p>
+        </div>
+        <div class="benefits" id="benefits-grid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== METRICS ===================== -->
+    <section class="metrics">
+      <div class="container">
+        <div class="metrics__grid">
+          <div class="reveal"><div class="metric__value">1,00,000+</div><div class="metric__label">Happy Customers</div></div>
+          <div class="reveal reveal--delay-1"><div class="metric__value">500+</div><div class="metric__label">Pickup Locations</div></div>
+          <div class="reveal reveal--delay-2"><div class="metric__value">4.8/5</div><div class="metric__label">Average Rating</div></div>
+          <div class="reveal reveal--delay-3"><div class="metric__value">2 min</div><div class="metric__label">Avg Booking Time</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== REVIEWS ===================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-heading reveal"><h2>What Our Customers Say</h2></div>
+        <div class="reviews" id="reviews-grid"></div>
+        <div class="center-cta reveal">
+          <a class="btn btn--ghost" href="all-reviews.html">View more</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== LOCATIONS ===================== -->
+    <section class="section section--alt" id="locations">
+      <div class="container">
+        <div class="section-heading reveal"><h2>Available in 500+ Locations</h2></div>
+        <div class="locations" id="locations-grid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="cta-band">
+      <div class="container cta-band__inner reveal">
+        <h2>Ready to Hit the Road?</h2>
+        <p>Join 1,00,000+ satisfied customers across India. Book your perfect rental in minutes.</p>
+        <div class="cta-band__actions">
+          <a class="btn btn--light btn--lg" href="available-cars.html">Book Now</a>
+          <a class="btn btn--outline-light btn--lg" href="available-cars.html">View All Vehicles</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <!-- Scripts -->
+  <script src="js/icons.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Available Cars — RideIndia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body style="background: var(--color-surface);">
+  <header id="site-header" data-active="available-cars.html"></header>
+
+  <!-- Search summary bar -->
+  <section class="search-summary">
+    <div class="container search-summary__inner">
+      <div class="criteria">
+        <div class="criteria__item"><small>Pickup</small><span><i data-icon="map-pin"></i> Mumbai, Maharashtra</span></div>
+        <div class="criteria__item"><small>Drop-off</small><span><i data-icon="map-pin"></i> Same as pickup</span></div>
+        <div class="criteria__item"><small>Pickup Date</small><span><i data-icon="calendar"></i> Jan 15, 2026</span></div>
+        <div class="criteria__item"><small>Return Date</small><span><i data-icon="calendar"></i> Jan 19, 2026</span></div>
+      </div>
+      <a class="btn btn--ghost" href="index.html"><i data-icon="settings"></i> Modify Search</a>
+    </div>
+  </section>
+
+  <main class="page">
+    <div class="container" style="padding-block: var(--space-12);">
+      <div class="results-meta">
+        <div>
+          <h1>Available Vehicles</h1>
+          <p id="results-count">6 cars found for Mumbai, Jan 15 — Jan 19</p>
+        </div>
+        <div class="toolbar">
+          <div class="filter-chips" id="filter-chips" role="group" aria-label="Filter by type"></div>
+          <div class="select" id="sort-select" aria-expanded="false">
+            <button class="select__button" type="button" aria-haspopup="listbox">
+              Sort: <span id="sort-label">Recommended</span> <i data-icon="chevron-down"></i>
+            </button>
+            <div class="select__menu" role="listbox">
+              <button class="select__option is-active" data-sort="recommended" role="option">Recommended</button>
+              <button class="select__option" data-sort="price-asc" role="option">Price: Low to High</button>
+              <button class="select__option" data-sort="price-desc" role="option">Price: High to Low</button>
+              <button class="select__option" data-sort="rating" role="option">Top Rated</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-grid" id="car-grid"></div>
+
+      <div class="pagination">
+        <button class="is-active">1</button>
+        <button>2</button>
+        <button aria-label="Next page"><i data-icon="chevron-right"></i></button>
+      </div>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/icons.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/available-cars.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

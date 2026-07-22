@@ -1,0 +1,91 @@
+/* ==========================================================================
+   RideIndia — Design Tokens
+   Extracted directly from the Figma file (Car Rental 2.fig)
+   ========================================================================== */
+
+:root {
+  /* ---- Brand / Palette ---------------------------------------------- */
+  --color-primary: #3b82f6;
+  --color-primary-dark: #1d4ed8;
+  --color-primary-soft: #eff4ff;
+
+  --color-ink: #0f172a;        /* headings / near-black navy */
+  --color-slate: #1e293b;      /* nav text */
+  --color-muted: #64748b;      /* body muted */
+  --color-muted-2: #94a3b8;    /* captions */
+  --color-muted-3: #666666;
+
+  --color-border: #e2e8f0;
+  --color-surface: #f8fafc;    /* section alt bg */
+  --color-surface-2: #f1f5f9;
+  --color-white: #ffffff;
+
+  --color-star: #fbbf24;
+  --color-success: #22c55e;
+  --color-danger: #ef4444;
+  --color-danger-soft: #fef2f2;
+
+  --overlay: rgba(7, 12, 24, 0.55);
+
+  /* ---- Typography --------------------------------------------------- */
+  --font-head: "Outfit", system-ui, -apple-system, sans-serif;
+  --font-body: "Archivo", system-ui, -apple-system, sans-serif;
+
+  /* fluid heading sizes: clamp(min, preferred, figma-max) */
+  --fs-hero: clamp(2.5rem, 5.2vw, 4.5rem);   /* 72px */
+  --fs-h1: clamp(2rem, 3.6vw, 3rem);         /* 48px */
+  --fs-h2: clamp(1.75rem, 3vw, 2.5rem);      /* 40px */
+  --fs-h3: clamp(1.25rem, 1.8vw, 1.5rem);    /* 24px */
+  --fs-h4: 1.25rem;                          /* 20px */
+  --fs-lg: 1.125rem;                         /* 18px */
+  --fs-md: 1rem;                             /* 16px */
+  --fs-sm: 0.875rem;                         /* 14px */
+  --fs-xs: 0.8125rem;                        /* 13px */
+  --fs-2xs: 0.75rem;                         /* 12px */
+
+  /* ---- Spacing scale ------------------------------------------------ */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-25: 6.25rem;   /* 100px section padding */
+
+  /* ---- Layout ------------------------------------------------------- */
+  --container: 1280px;
+  --gutter: 5rem;        /* 80px desktop side padding */
+  --nav-h: 80px;
+
+  /* ---- Radius ------------------------------------------------------- */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 100px;
+
+  /* ---- Shadow ------------------------------------------------------- */
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-card: 0 12px 24px rgba(0, 0, 0, 0.05);
+  --shadow-pop: 0 24px 48px rgba(0, 0, 0, 0.15);
+  --shadow-modal: 0 24px 48px rgba(0, 0, 0, 0.25);
+  --shadow-hover: 0 16px 40px rgba(15, 23, 42, 0.12);
+
+  /* ---- Motion ------------------------------------------------------- */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 0.15s;
+  --dur: 0.25s;
+  --dur-slow: 0.5s;
+}
+
+@media (max-width: 1024px) {
+  :root { --gutter: 2.5rem; --space-25: 4.5rem; }
+}
+@media (max-width: 640px) {
+  :root { --gutter: 1.25rem; --space-25: 3.5rem; --nav-h: 64px; }
+}

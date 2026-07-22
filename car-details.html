@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Details — RideIndia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <header id="site-header" data-active="available-cars.html"></header>
+
+  <main class="page">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a> <i data-icon="chevron-right"></i>
+        <a href="available-cars.html">Available Cars</a> <i data-icon="chevron-right"></i>
+        <span aria-current="page" id="crumb-name">Car</span>
+      </nav>
+
+      <section class="detail-hero" style="padding-bottom: var(--space-16);">
+        <img class="detail-hero__img" id="detail-img" src="" alt="">
+        <div>
+          <span class="detail-cat" id="detail-cat"></span>
+          <h1 class="detail-title" id="detail-title"></h1>
+          <div class="detail-rating">
+            <span class="stars" id="detail-stars"></span>
+            <span id="detail-rating-text"></span>
+          </div>
+          <div class="detail-price">
+            <small>Price starts from</small>
+            <b id="detail-price"></b>
+          </div>
+
+          <div class="avail-card">
+            <h2 style="font-family:var(--font-head);font-size:1.5rem;">Check Availability</h2>
+            <div class="field" data-field>
+              <label class="field__label" for="pickup-date">Pick-up Date</label>
+              <div class="field__control"><i data-icon="calendar"></i>
+                <input id="pickup-date" type="date" value="2026-07-10">
+              </div>
+            </div>
+            <div class="field" data-field>
+              <label class="field__label" for="return-date">Return Date</label>
+              <div class="field__control"><i data-icon="calendar"></i>
+                <input id="return-date" type="date" value="2026-07-13">
+              </div>
+            </div>
+            <div class="avail-card__row">
+              <span style="font-weight:600;">Status</span>
+              <span class="status-pill">Available</span>
+            </div>
+            <div class="avail-card__row">
+              <span class="muted" id="rate-line" style="color:var(--color-muted);"></span>
+              <span style="font-family:var(--font-head);font-weight:800;font-size:1.25rem;" id="subtotal"></span>
+            </div>
+            <button class="btn btn--primary btn--block btn--lg" id="book-btn">Book Now</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block" style="margin-top:0;">
+        <h2>Car Specifications</h2>
+        <div class="spec-grid" id="spec-grid"></div>
+      </section>
+
+      <section class="section-block">
+        <h2>About This Car</h2>
+        <p class="about-text" id="detail-desc"></p>
+        <h3 style="font-family:var(--font-head);margin-top:var(--space-6);">Included Features</h3>
+        <ul class="feature-list" id="feature-list"></ul>
+      </section>
+
+      <section class="section-block" style="padding-bottom: var(--space-16);">
+        <h2>Rental Policies</h2>
+        <div class="policy-grid">
+          <div class="policy-card"><i data-icon="calendar"></i><h3>Free Cancellation</h3><p>Cancel your booking up to 24 hours before pickup for a full refund.</p></div>
+          <div class="policy-card"><i data-icon="gauge"></i><h3>Unlimited Kilometers</h3><p>Drive as much as you want without worrying about extra mileage charges.</p></div>
+          <div class="policy-card"><i data-icon="shield-check"></i><h3>Insurance Included</h3><p>Basic collision damage waiver and theft protection included in the price.</p></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/icons.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/car-details.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

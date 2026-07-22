@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Details — RideIndia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body style="background: var(--color-surface);">
+  <header id="site-header" data-active="available-cars.html"></header>
+
+  <main class="page">
+    <div class="container layout-2col">
+      <div>
+        <div style="margin-bottom: var(--space-8);">
+          <h1 class="panel__title">Personal Details</h1>
+          <p class="panel__subtitle">Please provide your details exactly as shown on your license.</p>
+        </div>
+
+        <form class="panel" id="booking-form" novalidate>
+          <div class="form-grid">
+            <div class="field" data-field>
+              <label class="field__label" for="bk-name">Full Name</label>
+              <div class="field__control"><i data-icon="user"></i>
+                <input id="bk-name" type="text" placeholder="Enter your full name">
+              </div>
+              <span class="field__error"><i data-icon="info"></i><span data-error-text></span></span>
+            </div>
+            <div class="field" data-field>
+              <label class="field__label" for="bk-email">Email Address</label>
+              <div class="field__control"><i data-icon="mail"></i>
+                <input id="bk-email" type="email" placeholder="alex@example.com">
+              </div>
+              <span class="field__error"><i data-icon="info"></i><span data-error-text></span></span>
+            </div>
+            <div class="field" data-field>
+              <label class="field__label" for="bk-phone">Phone Number</label>
+              <div class="field__control"><i data-icon="phone"></i>
+                <input id="bk-phone" type="tel" placeholder="+91 98765 43210">
+              </div>
+              <span class="field__error"><i data-icon="info"></i><span data-error-text></span></span>
+            </div>
+            <div class="field" data-field>
+              <label class="field__label" for="bk-license">Driver's License Number</label>
+              <div class="field__control"><i data-icon="credit-card"></i>
+                <input id="bk-license" type="text" placeholder="DL-123456789">
+              </div>
+              <span class="field__error"><i data-icon="info"></i><span data-error-text></span></span>
+            </div>
+            <div class="field field--full" data-field>
+              <label class="field__label" for="bk-location">Pick-up Location</label>
+              <div class="field__control"><i data-icon="map-pin"></i>
+                <input id="bk-location" type="text" value="Chhatrapati Shivaji Intl Airport (BOM)">
+              </div>
+              <span class="field__error"><i data-icon="info"></i><span data-error-text></span></span>
+            </div>
+            <div class="field field--full" data-field>
+              <label class="field__label" for="bk-notes">Special Requests (Optional)</label>
+              <div class="field__control field__control--textarea">
+                <textarea id="bk-notes" placeholder="Any specific requirements?"></textarea>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn--primary btn--block btn--lg" type="submit" style="margin-top: var(--space-6);">Proceed to Payment</button>
+        </form>
+      </div>
+
+      <aside class="panel summary" id="summary" aria-label="Booking summary"></aside>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/icons.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/booking.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
