@@ -17,7 +17,7 @@
 
 /* Search card */
 .search-card {
-  width: 100%; max-width: 1120px;
+  width: 100%; max-width: 100%;
   background: #fff; border-radius: var(--radius-lg);
   box-shadow: var(--shadow-pop);
   padding: var(--space-8);
